@@ -10,11 +10,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
+            overflow: hidden;
         }
 
         header {
@@ -24,6 +24,9 @@
             padding: 20px;
             background-color: #004D98;
             color: white;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
         }
 
         header h1 {
@@ -42,7 +45,15 @@
             font-size: 18px;
         }
 
+        .container {
+            display: flex;
+            width: 300%;
+            height: 100vh;
+            transition: transform 0.5s ease;
+        }
+
         section {
+            flex: 1 0 100%;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -79,6 +90,9 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         @media (max-width: 768px) {
@@ -102,36 +116,58 @@
         <h1>FC Barcelona</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#" onclick="scrollToSection(0)">About</a></li>
+                <li><a href="#" onclick="scrollToSection(1)">History</a></li>
+                <li><a href="#" onclick="scrollToSection(2)">Achievements</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" class="section-1">
-        <div class="content">
-            <h2>Welcome to FC Barcelona</h2>
-            <p>More than a club. Discover the spirit of Barça!</p>
-        </div>
-    </section>
+    <div class="container" id="container">
+        <section class="section-1">
+            <div class="content">
+                <h2>Welcome to FC Barcelona</h2>
+                <p>More than a club. Discover the spirit of Barça!</p>
+            </div>
+        </section>
 
-    <section id="history" class="section-2">
-        <div class="content">
-            <h2>Our History</h2>
-            <p>Founded in 1899, FC Barcelona is one of the most successful football clubs in the world.</p>
-        </div>
-    </section>
+        <section class="section-2">
+            <div class="content">
+                <h2>Our History</h2>
+                <p>Founded in 1899, FC Barcelona is one of the most successful football clubs in the world.</p>
+            </div>
+        </section>
 
-    <section id="achievements" class="section-3">
-        <div class="content">
-            <h2>Achievements</h2>
-            <p>With numerous domestic and international titles, Barça has left an unforgettable mark in football.</p>
-        </div>
-    </section>
+        <section class="section-3">
+            <div class="content">
+                <h2>Achievements</h2>
+                <p>With numerous domestic and international titles, Barça has left an unforgettable mark in football.</p>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 FC Barcelona. All rights reserved.</p>
     </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function scrollToSection(index) {
+            const container = document.getElementById('container');
+            currentIndex = index;
+            container.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        window.addEventListener('keydown', (e) => {
+            const container = document.getElementById('container');
+            if (e.key === 'ArrowRight') {
+                currentIndex = Math.min(currentIndex + 1, 2);
+            } else if (e.key === 'ArrowLeft') {
+                currentIndex = Math.max(currentIndex - 1, 0);
+            }
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+    </script>
 </body>
 </html>
