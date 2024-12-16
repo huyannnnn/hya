@@ -1,103 +1,137 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>巴塞罗那足球俱乐部：荣耀与激情</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Barcelona</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #004D98;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .section-1 {
+            background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            background-color: #004D98; /* Backup color */
+        }
+
+        .section-2 {
+            background-color: #A50044;
+            color: white;
+        }
+
+        .section-3 {
+            background-color: #EEE;
+            color: #333;
+        }
+
+        .content {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #004D98;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>FC Barcelona</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-<h1>巴塞罗那足球俱乐部：荣耀与激情</h1>
-</header>
+    <section id="about" class="section-1">
+        <div class="content">
+            <h2>Welcome to FC Barcelona</h2>
+            <p>More than a club. Discover the spirit of Barça!</p>
+        </div>
+    </section>
 
-<article>
-<section>
-<h2>引言</h2>
-<p>欢迎来到巴塞罗那足球俱乐部的世界，在这里，每一场比赛都是一场艺术的展现，每一名球员都是传奇的缔造者。让我们一起探索这个充满荣誉和激情的俱乐部。</p>
-</section>
+    <section id="history" class="section-2">
+        <div class="content">
+            <h2>Our History</h2>
+            <p>Founded in 1899, FC Barcelona is one of the most successful football clubs in the world.</p>
+        </div>
+    </section>
 
-<section>
-<h3>俱乐部历史</h3>
-<p>巴塞罗那足球俱乐部（<abbr title="Fútbol Club Barcelona">FCB</abbr>）成立于1899年，位于西班牙加泰罗尼亚自治区的首府巴塞罗那市。作为世界上最著名的足球俱乐部之一，它承载着无数球迷的梦想和希望。</p>
-</section>
+    <section id="achievements" class="section-3">
+        <div class="content">
+            <h2>Achievements</h2>
+            <p>With numerous domestic and international titles, Barça has left an unforgettable mark in football.</p>
+        </div>
+    </section>
 
-<section>
-<h4>辉煌成就</h4>
-<p>巴塞罗那拥有众多令人瞩目的成就：</p>
-<ul>
-  <li><strong>西甲联赛冠军</strong>：多次获得，是西班牙最成功的俱乐部之一。</li>
-  <li><strong>欧洲冠军联赛冠军</strong>：在欧洲赛场上也屡获佳绩。</li>
-  <li><strong>国王杯冠军</strong>：在国内杯赛中同样表现卓越。</li>
-</ul>
-</section>
-
-<section>
-<h5>传奇人物</h5>
-<p>巴塞罗那孕育了许多传奇球星，他们的名字已经成为足球史上的经典：</p>
-<dl>
-  <dt><dfn>约翰·克鲁伊夫</dfn></dt>
-  <dd>荷兰足球史上最伟大的球员之一，不仅以其出色的球技闻名，更是巴塞罗那“梦之队”的奠基人。</dd>
-  
-  <dt><dfn>里奥·梅西</dfn></dt>
-  <dd>被认为是历史上最优秀的足球运动员之一，为巴塞罗那赢得了无数荣誉。</dd>
-  
-  <dt><dfn>安德烈斯·伊涅斯塔</dfn></dt>
-  <dd>中场大师，以其精准的传球和战术意识著称，是球队多年来的核心成员。</dd>
-</dl>
-</section>
-
-<section>
-<h6>现代巨星</h6>
-<p>目前效力于巴塞罗那的球员们继承了前辈们的衣钵，继续书写着俱乐部的新篇章：</p>
-<ul>
-  <li><mark>罗伯特·莱万多夫斯基</mark> - 波兰前锋，以其高效的进球能力而闻名。</li>
-  <li><mark>佩德里</mark> - 年轻天才中场，展现了极高的潜力和发展前景。</li>
-</ul>
-</section>
-
-<section>
-<h2>术语解释</h2>
-<dl>
-  <dt><dfn><abbr title="Spanish Primera División">西甲联赛</abbr></dfn></dt>
-  <dd>西班牙最高级别的职业足球联赛。</dd>
-  
-  <dt><dfn><abbr title="UEFA Champions League">欧洲冠军联赛</abbr></dfn></dt>
-  <dd>由欧洲足联主办的年度顶级俱乐部赛事。</dd>
-  
-  <dt><dfn><abbr title="Copa del Rey">国王杯</abbr></dfn></dt>
-  <dd>西班牙的一项重要国内足球淘汰赛。</dd>
-</dl>
-</section>
-
-<section>
-<h2>社区互动</h2>
-<p>如果您是巴塞罗那的忠实球迷，或对足球有浓厚的兴趣，请加入我们的社区论坛。在这里，您可以分享比赛心得、讨论球队动态以及与其他爱好者交流。</p>
-<ol>
-  <li>访问官方球迷论坛。</li>
-  <li>加入社交媒体上的球迷群组。</li>
-  <li>订阅官方新闻通讯获取最新资讯。</li>
-</ol>
-</section>
-
-<section>
-<h2>结论</h2>
-<p>巴塞罗那足球俱乐部不仅仅是一支球队，它代表着一种精神、一种文化。从辉煌的历史到今天的成就，巴塞罗那一直在追求卓越的路上不断前进。</p>
-</section>
-
-<section>
-<h2>读者反馈</h2>
-<p>我们非常重视您的意见，请通过以下方式给我们留言或提出建议：</p>
-<ul>
-  <li>在官方网站上留下评论。</li>
-  <li>发送邮件至客服邮箱。</li>
-  <li>通过社交媒体平台直接联系我们。</li>
-</ul>
-</section>
-</article>
-
-<footer>
-<p>&copy; 2024 巴塞罗那足球俱乐部. 版权所有.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 FC Barcelona. All rights reserved.</p>
+    </footer>
 </body>
 </html>
